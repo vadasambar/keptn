@@ -73,3 +73,5 @@ oc adm policy  add-cluster-role-to-user cluster-admin system:serviceaccount:kube
 
 # wait a little bit to ensure the cluster is ready
 sleep 30
+
+oc get pv --all-namespaces
