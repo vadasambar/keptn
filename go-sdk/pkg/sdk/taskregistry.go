@@ -9,6 +9,7 @@ type TaskRegistry struct {
 
 type TaskEntry struct {
 	TaskHandler TaskHandler
+	ReceivingEvent interface{}
 }
 
 func NewTasksMap() *TaskRegistry {

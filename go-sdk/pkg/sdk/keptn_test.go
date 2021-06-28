@@ -16,12 +16,10 @@ func Test_WhenReceivingAnEvent_StartedEventAndFinishedEventsAreSent(t *testing.T
 	taskHandler.ExecuteFunc = func(keptnHandle sdk.IKeptn, ce interface{}) (interface{}, *sdk.Error) {
 		return FakeTaskData{}, nil
 	}
-	taskHandler.InitDataFunc = func() interface{} {
-		return FakeTaskData{}
-	}
 
 	taskEntry := sdk.TaskEntry{
 		TaskHandler: taskHandler,
+		ReceivingEvent: &FakeTaskData{},
 	}
 
 	taskEntries := map[string]sdk.TaskEntry{"sh.keptn.event.faketask.triggered": taskEntry}

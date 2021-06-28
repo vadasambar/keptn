@@ -7,7 +7,7 @@ require (
 	github.com/google/uuid v1.2.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/keptn/go-utils v0.8.5
-	github.com/keptn/keptn/remediation-service v0.0.0-20210625063655-e102a9151be6
 	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.7.0
+	golang.org/x/sys v0.0.0-20200202164722-d101bd2416d5 // indirect
 )

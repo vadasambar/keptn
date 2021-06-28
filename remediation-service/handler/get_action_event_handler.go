@@ -6,7 +6,7 @@ import (
 	"github.com/keptn/go-utils/pkg/api/models"
 	"github.com/keptn/go-utils/pkg/lib/v0_1_4"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/remediation-service/internal/sdk"
+	"github.com/keptn/keptn/go-sdk/pkg/sdk"
 )
 
 const remediationSpecVersion = "spec.keptn.sh/0.1.4"
@@ -47,10 +47,6 @@ func (g *GetActionEventHandler) Execute(k sdk.IKeptn, data interface{}) (interfa
 	}
 
 	return finishedEventData, nil
-}
-
-func (g *GetActionEventHandler) InitData() interface{} {
-	return &keptnv2.GetActionTriggeredEventData{}
 }
 
 func (g *GetActionEventHandler) getRemediationResource(keptn sdk.IKeptn, eventData *keptnv2.GetActionTriggeredEventData) (*models.Resource, error) {
